@@ -1,0 +1,91 @@
+/* Fuente principal para los botones */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap');
+/* Fuente estilo digital para los números de la pantalla */
+@import url('https://fonts.cdnfonts.com/css/digital-7-mono'); 
+
+body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5; /* Fondo de la página */
+    margin: 0;
+}
+
+.calculadora {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 4px; /* Bordes ligeramente redondeados */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05), 0 5px 15px rgba(0, 0, 0, 0.03);
+    width: 280px;
+}
+
+#pantalla {
+    width: 100%;
+    height: 70px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: right;
+    
+    /* Configuración de la tipografía digital del visor */
+    font-family: 'Digital-7 Mono', monospace; 
+    font-size: 42px;
+    font-style: normal;
+    letter-spacing: 2px;
+    
+    color: #1a1a1a;
+    margin-bottom: 25px;
+    padding: 10px 5px;
+    box-sizing: border-box;
+}
+
+/* Uso grid para organizar los botones y gap para las líneas divisorias */
+.botones {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background-color: #eeeeee; 
+    border: 1px solid #eeeeee;
+}
+
+.btn {
+    padding: 20px 0;
+    font-size: 18px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    border: none;
+    background-color: #ffffff;
+    color: #333333;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #f9f9f9;
+}
+
+/* Colores para diferenciar operadores y botones de funciones */
+.op {
+    background-color: #fafafa;
+    color: #555555;
+}
+
+.fn {
+    background-color: #fdfdfd;
+    color: #888888;
+}
+
+.igual {
+    background-color: #222222;
+    color: #ffffff;
+}
+
+.igual:hover {
+    background-color: #444444;
+}
+
+.cero {
+    grid-column: span 2; /* Hago que el botón cero ocupe dos columnas */
+}
